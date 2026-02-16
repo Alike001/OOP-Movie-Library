@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url('img/background.png');
+  /*background-image: url('img/dark-bgd.jpg');*/
 }
 
 .navbar {
@@ -86,12 +86,13 @@ body {
 
 .toggle-ball {
   position: absolute;
-  background-color: red;
+  background-color: black;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   right: 1px;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 .sidebar {
   position: fixed;
@@ -149,4 +150,26 @@ body {
 
 .empty-state {
   opacity: 0.7;
+}
+
+.navbar-container.active {
+  color: black;
+}
+
+.left-menu-icon.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+body.active {
+  /*background-image: url('img/light-bg.png');*/
+  color: black;
+}
+
+.toggle-ball.active {
+  background-color: white;
+  transform: translate(-20px);
 }
