@@ -53,6 +53,20 @@ searchBtn.addEventListener("click", () => {
   fetchMovie(movieName);
 });
 
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const movieName = searchInput.value.trim();
+
+    if (movieName === "") {
+      alert("Please enter a movie name");
+      return;
+    }
+
+    movieContainer.innerHTML = "<p>Loading...</p>";
+    fetchMovie(movieName);
+  }
+});
+
 function fetchMovie(movieName) {
   const url = `https://www.omdbapi.com/?apikey=19be8a9e&t=${movieName}`;
 
