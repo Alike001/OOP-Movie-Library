@@ -6,7 +6,10 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  /*background-image: url('img/dark-bgd.jpg');*/
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .navbar {
@@ -165,11 +168,44 @@ body {
 }
 
 body.active {
-  /*background-image: url('img/light-bg.png');*/
+  background-image: url('img/light-bg.png');
   color: black;
 }
 
 .toggle-ball.active {
   background-color: white;
   transform: translate(-20px);
+}
+
+@media (max-width: 940px){
+  .menu-container {
+    display: none;
+  }
+}
+
+.movie-container {
+  margin-top: 20px;
+}
+
+.movie-card {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.movie-card img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.movie-info h2 {
+  margin-bottom: 10px;
+}
+
+.empty-state.active {
+  opacity: 0.9;
+  color: black;
 }
